@@ -7,6 +7,7 @@ __email__ = 'linton.tw@gmail.com'
 setup(name='pydcard',
       version=__version__,
       description='This is a Dcard API wrapper',
+      long_description=open('README.md').read(),
       url='http://github.com/John-Lin/pydcard',
       author=__author__,
       author_email=__email__,
