@@ -41,6 +41,11 @@ th_one_id = page_one[0].get('id')
 pprint((pydcard.get_post(th_one_id)))
 ```
 
+The complicated example (Need tabulate package)
+
+![dcard_term](./screenshots/dcard_term.gif)
+
+
 ### API
 
 - **get_post(post_id)**
