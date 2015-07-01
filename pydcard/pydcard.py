@@ -2,7 +2,7 @@ import requests
 from pprint import pprint
 from urllib.parse import urljoin
 
-from api import FORUM_APIS, POST_CONTENT_API, TOP_POST_API
+from .api import FORUM_APIS, POST_CONTENT_API, TOP_POST_API
 
 
 def getPost(post_id):
