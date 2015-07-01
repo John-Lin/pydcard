@@ -1,11 +1,15 @@
 from setuptools import setup
 
+__version__ = '0.0.2'
+__author__ = 'John Lin'
+__email__ = 'linton.tw@gmail.com'
+
 setup(name='pydcard',
-      version='0.0.2',
+      version=__version__,
       description='This is a Dcard API wrapper',
       url='http://github.com/John-Lin/pydcard',
-      author='John Lin',
-      author_email='linton.tw@gmail.com',
+      author=__author__,
+      author_email=__email__,
       license='MIT',
       packages=['pydcard'],
       classifiers=[
