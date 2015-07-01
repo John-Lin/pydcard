@@ -41,10 +41,9 @@ th_one_id = page_one[0].get('id')
 pprint((pydcard.get_post(th_one_id)))
 ```
 
-The complicated example (Need tabulate package)
+The complicated example (Need to install [tabulate](https://pypi.python.org/pypi/tabulate) package)
 
 ![dcard_term](./screenshots/dcard_term.gif)
-
 
 ### API
 
