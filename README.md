@@ -21,3 +21,40 @@ pip install pydcard
 `pip` does install dependencies
 
 - [requests](https://github.com/kennethreitz/requests)
+
+### Usage
+
+The basic usage
+
+```
+import pydcard
+from pprint import pprint
+
+# Get top posts in *all* forum from Dcard. The parameter is page number.
+page_one = pydcard.get_all_top_posts(1)
+
+# Each page have 20 threads, now get the id in index 0.
+# i.e. the first thread's id.
+th_one_id = page_one[0].get('id')
+
+# Using thread id to get the post content
+pprint((pydcard.get_post(th_one_id)))
+```
+
+### API
+
+- **get_post(post_id)**
+
+    Getting post content by post ID.
+
+- **get_all_top_posts(to_page_num)**
+
+    Getting top posts from *all* forum. From page 1 to page `to_page_num`.
+
+- **get_all_new_posts(to_page_num)**
+
+    Getting recently posts from *all* forum. From page 1 to page `to_page_num`.
+
+- **get_all_page(page_num)**
+
+    Getting recently posts from *all* forum, only one page.
