@@ -1,3 +1,3 @@
-from .pydcard import getPost, getAllTopPosts, getAllNewPosts, getAllPage
+from .pydcard import *
 
-__version__ = '0.0.3'
+__version__ = '0.0.4'
