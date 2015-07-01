@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='pydcard',
-      version='0.0.1',
+      version='0.0.2',
       description='This is a Dcard API wrapper',
       url='http://github.com/John-Lin/pydcard',
       author='John Lin',
