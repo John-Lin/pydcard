@@ -1,12 +1,13 @@
 from setuptools import setup
 
-__version__ = '0.0.5'
+__version__ = '0.0.7'
 __author__ = 'John Lin'
 __email__ = 'linton.tw@gmail.com'
 
 setup(name='pydcard',
       version=__version__,
       description='This is a Dcard API wrapper',
+      long_description=open('README.md').read(),
       url='http://github.com/John-Lin/pydcard',
       author=__author__,
       author_email=__email__,

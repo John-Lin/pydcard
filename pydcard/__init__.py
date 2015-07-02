@@ -8,4 +8,4 @@ from .pydcard import (
     get_delete_page, get_whysoserious_page, get_forum_list
 )
 
-__version__ = '0.0.5'
+__version__ = '0.0.7'
