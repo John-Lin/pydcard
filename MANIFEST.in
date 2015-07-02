@@ -1,0 +1,4 @@
+include README.rst
+include LICENSE.txt
+recursive-include examples *
+recursive-include screenshots *
