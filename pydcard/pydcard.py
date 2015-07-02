@@ -1,9 +1,9 @@
 import requests
-# from pprint import pprint
+from pprint import pprint
 from urllib.parse import urljoin
 from functools import wraps
 
-from .api import FORUM_APIS, POST_CONTENT_API, TOP_POST_API
+from .api import FORUM_APIS, FORUM_API, POST_CONTENT_API, TOP_POST_API
 
 
 def pageassert(func):
@@ -16,6 +16,20 @@ def pageassert(func):
             raise ValueError('Page Number not found')
         return func(*args, **kwargs)
     return wrapper
+
+
+def get_forum_list():
+    forum_api = FORUM_API
+    r = requests.get(forum_api)
+    if r.status_code == requests.codes.ok:
+        forums_list = []
+        forums_json = r.json().get('forum')
+        for i in forums_json:
+            forums_list.append(i.get('alias'))
+        return forums_list
+    else:
+        print(r.status_code)
+        return None
 
 
 def get_post(post_id):
@@ -31,14 +45,10 @@ def get_post(post_id):
 
 @pageassert
 def get_all_top_posts(page_num=1):
-    if page_num < 1 or page_num > 40:
-        raise ValueError('Page Number not found')
-        return None
-
     total_posts = []
 
     for i in range(1, page_num+1):
-        top_posts_api = TOP_POST_API.replace('<PageNumber>', str(i))
+        top_posts_api = TOP_POST_API.format(page_number=i)
         r = requests.get(top_posts_api)
         if r.status_code == requests.codes.ok:
             total_posts = total_posts + r.json()

@@ -1,5 +1,6 @@
 POST_CONTENT_API = 'https://www.dcard.tw/api/post/all/'
-TOP_POST_API = 'https://www.dcard.tw/api/forum/all/<PageNumber>/popular'
+FORUM_API = 'https://www.dcard.tw/api/forum'
+TOP_POST_API = 'https://www.dcard.tw/api/forum/all/{page_number}/popular'
 
 FORUM_APIS = {
     'FORUM_ALL_API': 'https://www.dcard.tw/api/forum/all/',
