@@ -62,3 +62,7 @@ The complicated example (Need to install [prettytable](https://pypi.python.org/p
 - **get_all_page(page_num)**
 
     Getting recently posts from *all* forum, only one page.
+
+### Related
+
+- See Node.js Dcard API wrapper package in [npm](https://www.npmjs.com/package/dcard).
